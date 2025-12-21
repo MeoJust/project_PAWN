@@ -2847,6 +2847,7 @@ GameObject:
   - component: {fileID: 975046849705066568}
   - component: {fileID: 1003481786592778198}
   - component: {fileID: 993364666347507622}
+  - component: {fileID: 1003481786592778199}
   m_Layer: 0
   m_Name: wp_357
   m_TagString: Untagged
@@ -3545,6 +3546,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980855901150657634}
   m_Mesh: {fileID: 4300000, guid: 4079e2051e4345248b3eb3283c25022d, type: 3}
+--- !u!114 &1003481786592778199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980855901150657634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_357
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 1
+  _isRifleHi: 0
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!33 &1003546894156372908
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3613,6 +3638,7 @@ GameObject:
   - component: {fileID: 3652831345199689689}
   - component: {fileID: 1537277271769537299}
   - component: {fileID: 3196981264475871817}
+  - component: {fileID: 3652831345199689690}
   m_Layer: 0
   m_Name: wp_shotgun
   m_TagString: Untagged
@@ -3653,6 +3679,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 342219780706437493}
+  - component: {fileID: 1149578711338505168}
   m_Layer: 0
   m_Name: wp_np5
   m_TagString: Untagged
@@ -3660,6 +3687,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &1149578711338505168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149578711338505167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_np5
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!4 &1156697946631003503
 Transform:
   m_ObjectHideFlags: 0
@@ -3686,6 +3737,7 @@ GameObject:
   - component: {fileID: 1311891148606538216}
   - component: {fileID: 1320240894655136750}
   - component: {fileID: 1329779312280012226}
+  - component: {fileID: 1329779312280012227}
   m_Layer: 0
   m_Name: wp_fireAxe
   m_TagString: Untagged
@@ -3765,6 +3817,21 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1329779312280012227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306358935403505534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc24362fd098bb34aa9f5bd1fa74d78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
+  _id: 
+  _damageMin: 0
+  _damageMax: 0
 --- !u!33 &1365321964371149802
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4046,6 +4113,7 @@ GameObject:
   - component: {fileID: 1667971622379368093}
   - component: {fileID: 1676016366841492155}
   - component: {fileID: 1686342525931484115}
+  - component: {fileID: 1686342525931484116}
   m_Layer: 0
   m_Name: wp_spec8
   m_TagString: Untagged
@@ -4437,6 +4505,30 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1686342525931484116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670847694141755931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_spec8
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 0
+  _isRifleLow: 1
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!23 &1686383797276757987
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4711,6 +4803,7 @@ GameObject:
   - component: {fileID: 1818199727501866187}
   - component: {fileID: 1823114091984000289}
   - component: {fileID: 1830377760590478263}
+  - component: {fileID: 1830377760590478264}
   m_Layer: 0
   m_Name: wp_38
   m_TagString: Untagged
@@ -5320,6 +5413,30 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1830377760590478264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815465354284056403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_38
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 1
+  _isRifleHi: 0
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!23 &1830411678343268833
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5577,6 +5694,7 @@ GameObject:
   - component: {fileID: 2856039942739612362}
   - component: {fileID: 19780745707038208}
   - component: {fileID: 2057931290297128539}
+  - component: {fileID: 2856039942739612363}
   m_Layer: 0
   m_Name: wp_n16
   m_TagString: Untagged
@@ -5734,6 +5852,7 @@ GameObject:
   - component: {fileID: 2170018549679961259}
   - component: {fileID: 2195929954847182111}
   - component: {fileID: 2188462438483186747}
+  - component: {fileID: 2195929954847182112}
   m_Layer: 0
   m_Name: wp_j36s
   m_TagString: Untagged
@@ -6067,6 +6186,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2166162625894245805}
   m_Mesh: {fileID: 4300000, guid: 03f0a441e16711b48b66ed5af159940f, type: 3}
+--- !u!114 &2195929954847182112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2166162625894245805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_j36s
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!33 &2196390680355393645
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6277,6 +6420,7 @@ GameObject:
   - component: {fileID: 2526950758275784308}
   - component: {fileID: 2555129664788630772}
   - component: {fileID: 2545190549522617408}
+  - component: {fileID: 2555129664788630773}
   m_Layer: 0
   m_Name: wp_jb07
   m_TagString: Untagged
@@ -6652,6 +6796,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2523873123587756900}
   m_Mesh: {fileID: 4300000, guid: 005aab8158014df47a1847978384b018, type: 3}
+--- !u!114 &2555129664788630773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2523873123587756900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_jb07
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 1
+  _isRifleHi: 0
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!33 &2555169603788575236
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7129,6 +7297,7 @@ GameObject:
   - component: {fileID: 2657585969180270333}
   - component: {fileID: 2632257257757047207}
   - component: {fileID: 2639940522924727177}
+  - component: {fileID: 2663680093419561380}
   m_Layer: 0
   m_Name: wp_m1
   m_TagString: Untagged
@@ -7136,6 +7305,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &2663680093419561380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2663680093419561379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_m1
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!1 &2663731363176532299
 GameObject:
   m_ObjectHideFlags: 0
@@ -8469,6 +8662,7 @@ GameObject:
   - component: {fileID: 2733655697763188563}
   - component: {fileID: 2704656208308531425}
   - component: {fileID: 2714338243052443735}
+  - component: {fileID: 2737058477992659260}
   m_Layer: 0
   m_Name: wp_grenadeLouncher
   m_TagString: Untagged
@@ -8476,6 +8670,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &2737058477992659260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2737058477992659259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_grenadeLouncher
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 0
+  _isRifleLow: 1
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!1 &2753191313301321187
 GameObject:
   m_ObjectHideFlags: 0
@@ -8541,6 +8759,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965462847960713173}
   m_Mesh: {fileID: -695774298109068085, guid: a5f56547380d3e6448e877c01e64c479, type: 3}
+--- !u!114 &2856039942739612363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965462847960713173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_n16
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 1
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!64 &2860197880239475546
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8865,6 +9107,7 @@ GameObject:
   - component: {fileID: 3009249964268577907}
   - component: {fileID: 3000851561886082143}
   - component: {fileID: 2992397351661801509}
+  - component: {fileID: 3014340527672744636}
   m_Layer: 0
   m_Name: wp_blaster
   m_TagString: Untagged
@@ -8872,6 +9115,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &3014340527672744636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3014340527672744635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_blaster
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 1
+  _isRifleHi: 0
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!1 &3015060668993920181
 GameObject:
   m_ObjectHideFlags: 0
@@ -9085,6 +9352,7 @@ GameObject:
   - component: {fileID: 3037402043847450898}
   - component: {fileID: 3044791913227969556}
   - component: {fileID: 3054551670431793188}
+  - component: {fileID: 3054551670431793189}
   m_Layer: 0
   m_Name: wp_scr
   m_TagString: Untagged
@@ -9372,6 +9640,30 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3054551670431793189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3040808066401673970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_scr
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!23 &3054759996797902040
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9645,6 +9937,7 @@ GameObject:
   - component: {fileID: 1696050442667739378}
   - component: {fileID: 3489554884557683768}
   - component: {fileID: 2860197880239475546}
+  - component: {fileID: 3489554884557683769}
   m_Layer: 0
   m_Name: wp_rifleBullpup
   m_TagString: Untagged
@@ -10392,6 +10685,7 @@ GameObject:
   - component: {fileID: 3444889459809999492}
   - component: {fileID: 3433451847465751910}
   - component: {fileID: 3426295026881191840}
+  - component: {fileID: 3448239015955384439}
   m_Layer: 0
   m_Name: wp_hummerCannon
   m_TagString: Untagged
@@ -10399,6 +10693,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &3448239015955384439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3448239015955384438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_hummerCannon
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!1 &3448504089053304068
 GameObject:
   m_ObjectHideFlags: 0
@@ -10466,6 +10784,30 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3489554884557683769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129333091402096109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_rifleBullpup
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 1
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!4 &3545005871723067270
 Transform:
   m_ObjectHideFlags: 0
@@ -10541,6 +10883,7 @@ GameObject:
   - component: {fileID: 4167904904702451124}
   - component: {fileID: 1042729518188122641}
   - component: {fileID: 2998398656144090843}
+  - component: {fileID: 4167904904702451125}
   m_Layer: 0
   m_Name: wp_knife
   m_TagString: Untagged
@@ -10556,6 +10899,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032870196336229062}
   m_Mesh: {fileID: 1773197216858952008, guid: f33a6750edda74241bd72bbd1b8fec7d, type: 3}
+--- !u!114 &3652831345199689690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032870196336229062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_shotgun
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 0
+  _isRifleLow: 1
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!4 &3750029456662716529
 Transform:
   m_ObjectHideFlags: 0
@@ -11075,6 +11442,7 @@ GameObject:
   - component: {fileID: 3874674200367110563}
   - component: {fileID: 3864782385462350835}
   - component: {fileID: 3857298035365491513}
+  - component: {fileID: 3877778509731527120}
   m_Layer: 0
   m_Name: wp_smg45
   m_TagString: Untagged
@@ -11082,6 +11450,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &3877778509731527120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3877778509731527119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_smg45
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!1 &3877885961461935767
 GameObject:
   m_ObjectHideFlags: 0
@@ -11516,6 +11908,7 @@ GameObject:
   - component: {fileID: 4134247305754532106}
   - component: {fileID: 4118516803690444622}
   - component: {fileID: 4108346645055657470}
+  - component: {fileID: 4134247305754532107}
   m_Layer: 0
   m_Name: wp_energyRifle
   m_TagString: Untagged
@@ -11576,6 +11969,30 @@ Transform:
   - {fileID: 4125454492752986786}
   m_Father: {fileID: 1809578162}
   m_LocalEulerAnglesHint: {x: -90, y: -90, z: 0}
+--- !u!114 &4134247305754532107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130821319965838882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_energyRifle
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!1 &4147074427101372272
 GameObject:
   m_ObjectHideFlags: 0
@@ -11610,6 +12027,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 517385732}
   m_LocalEulerAnglesHint: {x: -173.23, y: 0, z: -88.138}
+--- !u!114 &4167904904702451125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646947858375345934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc24362fd098bb34aa9f5bd1fa74d78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
+  _id: 
+  _damageMin: 0
+  _damageMax: 0
 --- !u!1 &4180532410173017220
 GameObject:
   m_ObjectHideFlags: 0
@@ -11621,6 +12053,7 @@ GameObject:
   - component: {fileID: 4184085745215072062}
   - component: {fileID: 4213017769787915478}
   - component: {fileID: 4202872129568639354}
+  - component: {fileID: 4213017769787915479}
   m_Layer: 0
   m_Name: wp_akn74s
   m_TagString: Untagged
@@ -12056,6 +12489,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4180532410173017220}
   m_Mesh: {fileID: 4300000, guid: bfcc82f419f1e3a4abeb8da721e79d12, type: 3}
+--- !u!114 &4213017769787915479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4180532410173017220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_akn74s
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!33 &4213434227979857024
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12076,6 +12533,7 @@ GameObject:
   - component: {fileID: 476747810573989923}
   - component: {fileID: 2412039144137411817}
   - component: {fileID: 7198434681703102595}
+  - component: {fileID: 7198434681703102596}
   m_Layer: 0
   m_Name: wp_cult
   m_TagString: Untagged
@@ -12345,6 +12803,7 @@ GameObject:
   - component: {fileID: 4665482377626252853}
   - component: {fileID: 4672188397377833279}
   - component: {fileID: 4682705603707211363}
+  - component: {fileID: 4682705603707211364}
   m_Layer: 0
   m_Name: wp_np7
   m_TagString: Untagged
@@ -12646,6 +13105,30 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4682705603707211364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660043685779633367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_np7
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 1
+  _isRifleHi: 0
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!23 &4682840124388663729
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12936,6 +13419,7 @@ GameObject:
   - component: {fileID: 4963441781313132257}
   - component: {fileID: 4942493958218502173}
   - component: {fileID: 4953138494535667395}
+  - component: {fileID: 4966505012399603900}
   m_Layer: 0
   m_Name: wp_bat
   m_TagString: Untagged
@@ -12943,6 +13427,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &4966505012399603900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4966505012399603899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc24362fd098bb34aa9f5bd1fa74d78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
+  _id: 
+  _damageMin: 0
+  _damageMax: 0
 --- !u!4 &4982804971487315448
 Transform:
   m_ObjectHideFlags: 0
@@ -13068,6 +13567,7 @@ GameObject:
   - component: {fileID: 4987810068113134090}
   - component: {fileID: 4994505003973955508}
   - component: {fileID: 5006401015888824064}
+  - component: {fileID: 5006401015888824065}
   m_Layer: 0
   m_Name: wp_rpg
   m_TagString: Untagged
@@ -13251,6 +13751,30 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5006401015888824065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4984963733436018436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_rpg
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!23 &5006480483714858516
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13606,6 +14130,7 @@ GameObject:
   - component: {fileID: 5048382732568555692}
   - component: {fileID: 5073948341766189500}
   - component: {fileID: 5065722772147945568}
+  - component: {fileID: 5073948341766189501}
   m_Layer: 0
   m_Name: wp_shotgunM
   m_TagString: Untagged
@@ -13839,6 +14364,7 @@ GameObject:
   - component: {fileID: 8845035709271406266}
   - component: {fileID: 6726995021642629744}
   - component: {fileID: 5224333542869044416}
+  - component: {fileID: 8845035709271406267}
   m_Layer: 0
   m_Name: wp_slon
   m_TagString: Untagged
@@ -13862,6 +14388,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5051881560602424562}
   m_Mesh: {fileID: 4300000, guid: bb49c0152a866d84daa690b122d00ca2, type: 3}
+--- !u!114 &5073948341766189501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5051881560602424562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_shotgunM
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 0
+  _isRifleLow: 1
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!33 &5073991059822935892
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13889,6 +14439,7 @@ GameObject:
   - component: {fileID: 5095489212978435362}
   - component: {fileID: 5103702498205339916}
   - component: {fileID: 5113243437455131608}
+  - component: {fileID: 5113243437455131609}
   m_Layer: 0
   m_Name: wp_crowbar
   m_TagString: Untagged
@@ -13983,6 +14534,21 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5113243437455131609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090501397307350580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc24362fd098bb34aa9f5bd1fa74d78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
+  _id: 
+  _damageMin: 0
+  _damageMax: 0
 --- !u!23 &5145772076168375030
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14228,6 +14794,7 @@ GameObject:
   - component: {fileID: 5158785542296147660}
   - component: {fileID: 5179152761491043656}
   - component: {fileID: 5173571961901092928}
+  - component: {fileID: 5179152761491043657}
   m_Layer: 0
   m_Name: wp_svd
   m_TagString: Untagged
@@ -14537,6 +15104,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5160567055284075252}
   m_Mesh: {fileID: 4300000, guid: 2ccca7b73df113548a62d6caa4ffb6b1, type: 3}
+--- !u!114 &5179152761491043657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5160567055284075252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_svd
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!33 &5179214506222901182
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14755,6 +15346,7 @@ GameObject:
   - component: {fileID: 5560454295587818346}
   - component: {fileID: 5571717685629043822}
   - component: {fileID: 5580248865964074012}
+  - component: {fileID: 5580248865964074013}
   m_Layer: 0
   m_Name: wp_iceAxe
   m_TagString: Untagged
@@ -14834,6 +15426,21 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5580248865964074013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5557759657234395542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc24362fd098bb34aa9f5bd1fa74d78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
+  _id: 
+  _damageMin: 0
+  _damageMax: 0
 --- !u!33 &5585603067565605959
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14854,6 +15461,7 @@ GameObject:
   - component: {fileID: 8177632506422150014}
   - component: {fileID: 6239805702062880692}
   - component: {fileID: 6310765003204552205}
+  - component: {fileID: 8177632506422150015}
   m_Layer: 0
   m_Name: wp_oldAxe
   m_TagString: Untagged
@@ -14971,6 +15579,7 @@ GameObject:
   - component: {fileID: 5662064493436350615}
   - component: {fileID: 5689374201513689659}
   - component: {fileID: 5681167144233710005}
+  - component: {fileID: 5689374201513689660}
   m_Layer: 0
   m_Name: wp_knifeBig
   m_TagString: Untagged
@@ -15050,6 +15659,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5658324391140009229}
   m_Mesh: {fileID: 4300000, guid: 821b8934aab955f438a5ba5e631e8604, type: 3}
+--- !u!114 &5689374201513689660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5658324391140009229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc24362fd098bb34aa9f5bd1fa74d78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
+  _id: 
+  _damageMin: 0
+  _damageMax: 0
 --- !u!1 &5780187034007292338
 GameObject:
   m_ObjectHideFlags: 0
@@ -15526,6 +16150,7 @@ GameObject:
   - component: {fileID: 6257960324373424074}
   - component: {fileID: 6242346655105329726}
   - component: {fileID: 6234437401276555416}
+  - component: {fileID: 6257960324373424075}
   m_Layer: 0
   m_Name: wp_machete
   m_TagString: Untagged
@@ -15548,6 +16173,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 517385732}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
+--- !u!114 &6257960324373424075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6256144244448936190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc24362fd098bb34aa9f5bd1fa74d78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
+  _id: 
+  _damageMin: 0
+  _damageMax: 0
 --- !u!4 &6269052563417732405
 Transform:
   m_ObjectHideFlags: 0
@@ -15574,6 +16214,7 @@ GameObject:
   - component: {fileID: 6269052563417732405}
   - component: {fileID: 6302472785835729781}
   - component: {fileID: 6294390618027741213}
+  - component: {fileID: 6302472785835729782}
   m_Layer: 0
   m_Name: wp_batSmall
   m_TagString: Untagged
@@ -15653,6 +16294,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6271457201604093893}
   m_Mesh: {fileID: 4300000, guid: 5d4d8c275aacdd943b94b26940482a2e, type: 3}
+--- !u!114 &6302472785835729782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6271457201604093893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc24362fd098bb34aa9f5bd1fa74d78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
+  _id: 
+  _damageMin: 0
+  _damageMax: 0
 --- !u!23 &6307583099095741970
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15995,6 +16651,7 @@ GameObject:
   - component: {fileID: 6325739636322124980}
   - component: {fileID: 6314099994525012774}
   - component: {fileID: 6308848668028872642}
+  - component: {fileID: 6331068231149458525}
   m_Layer: 0
   m_Name: wp_cultGold
   m_TagString: Untagged
@@ -16002,6 +16659,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &6331068231149458525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6331068231149458524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_cultGold
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 1
+  _isRifleHi: 0
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!1 &6331517597185302978
 GameObject:
   m_ObjectHideFlags: 0
@@ -16274,6 +16955,7 @@ GameObject:
   - component: {fileID: 6957361282294160956}
   - component: {fileID: 5145772076168375030}
   - component: {fileID: 2919818127823088534}
+  - component: {fileID: 6957361282294160957}
   m_Layer: 0
   m_Name: wp_magazineShotgun
   m_TagString: Untagged
@@ -16509,6 +17191,7 @@ GameObject:
   - component: {fileID: 6927132909208192618}
   - component: {fileID: 6941483162219784848}
   - component: {fileID: 6951705696498191120}
+  - component: {fileID: 6951705696498191121}
   m_Layer: 0
   m_Name: wp_famous
   m_TagString: Untagged
@@ -16695,6 +17378,30 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6951705696498191121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6929151818225050288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_famous
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!23 &6951798767685717756
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16899,6 +17606,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6659003060335692579}
   m_Mesh: {fileID: 1489769429068794750, guid: 2e363af4ad752374c82920d582ca74d0, type: 3}
+--- !u!114 &6957361282294160957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6659003060335692579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_magazineShotgun
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 0
+  _isRifleLow: 1
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!33 &6967514761289154154
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16986,6 +17717,30 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3727299226792910341, guid: e6efe674338ad4a49866fd7e5c2ba6b4, type: 3}
+--- !u!114 &7198434681703102596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4213597535401045308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_cult
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 1
+  _isRifleHi: 0
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!64 &7221508805737735891
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17958,6 +18713,7 @@ GameObject:
   - component: {fileID: 7953238956439754525}
   - component: {fileID: 7937332342859644663}
   - component: {fileID: 7927599287395562295}
+  - component: {fileID: 7953238956439754526}
   m_Layer: 0
   m_Name: wp_deagle
   m_TagString: Untagged
@@ -18019,6 +18775,30 @@ Transform:
   - {fileID: 7944571885696796229}
   m_Father: {fileID: 213186274}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
+--- !u!114 &7953238956439754526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7950374229420596267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_deagle
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 1
+  _isRifleHi: 0
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!4 &7999534546181018391
 Transform:
   m_ObjectHideFlags: 0
@@ -18218,6 +18998,7 @@ GameObject:
   - component: {fileID: 7999772114280273459}
   - component: {fileID: 8028857964506682211}
   - component: {fileID: 8016490125618990841}
+  - component: {fileID: 8028857964506682212}
   m_Layer: 0
   m_Name: wp_m100
   m_TagString: Untagged
@@ -18870,6 +19651,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8003641227267997529}
   m_Mesh: {fileID: 4300000, guid: 446a4ba815eeb394d8c23498cae46bf4, type: 3}
+--- !u!114 &8028857964506682212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003641227267997529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_m100
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 0
+  _isRifleLow: 1
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!33 &8028897273625853615
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18920,6 +19725,7 @@ GameObject:
   - component: {fileID: 5585603067565605959}
   - component: {fileID: 7665402734337880205}
   - component: {fileID: 5944108140842418403}
+  - component: {fileID: 8803367323166280675}
   m_Layer: 0
   m_Name: wp_gluck17
   m_TagString: Untagged
@@ -18935,6 +19741,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5591432559730202209}
   m_Mesh: {fileID: 7243244776062849328, guid: 829b122512a90914986a375d72271b29, type: 3}
+--- !u!114 &8177632506422150015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5591432559730202209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc24362fd098bb34aa9f5bd1fa74d78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
+  _id: 
+  _damageMin: 0
+  _damageMax: 0
 --- !u!1 &8226933512358464463
 GameObject:
   m_ObjectHideFlags: 0
@@ -18946,6 +19767,7 @@ GameObject:
   - component: {fileID: 8232231492212564945}
   - component: {fileID: 8239805293449738601}
   - component: {fileID: 8249405384494815841}
+  - component: {fileID: 8249405384494815842}
   m_Layer: 0
   m_Name: wp_kitchenKnife
   m_TagString: Untagged
@@ -19025,6 +19847,21 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8249405384494815842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8226933512358464463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc24362fd098bb34aa9f5bd1fa74d78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
+  _id: 
+  _damageMin: 0
+  _damageMax: 0
 --- !u!4 &8259435727749835059
 Transform:
   m_ObjectHideFlags: 0
@@ -19218,6 +20055,7 @@ GameObject:
   - component: {fileID: 8362680465339306004}
   - component: {fileID: 8389049882285564528}
   - component: {fileID: 8379689728939105148}
+  - component: {fileID: 8389049882285564529}
   m_Layer: 0
   m_Name: wp_44
   m_TagString: Untagged
@@ -19521,6 +20359,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8367097204338803570}
   m_Mesh: {fileID: 4300000, guid: 88322a7c5400a4e458752b731a210bbf, type: 3}
+--- !u!114 &8389049882285564529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8367097204338803570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_44
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 1
+  _isRifleHi: 0
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!33 &8389078871068988638
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19603,6 +20465,7 @@ GameObject:
   - component: {fileID: 8473526716392987491}
   - component: {fileID: 8498739160724102751}
   - component: {fileID: 8493007854734290057}
+  - component: {fileID: 8498739160724102752}
   m_Layer: 0
   m_Name: wp_n70
   m_TagString: Untagged
@@ -19982,6 +20845,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8470697177149633187}
   m_Mesh: {fileID: 4300000, guid: 0dd5d94fdbd23d547b6bf16cb52f208a, type: 3}
+--- !u!114 &8498739160724102752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8470697177149633187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_n70
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!33 &8498836552568647995
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20080,6 +20967,7 @@ GameObject:
   - component: {fileID: 8693461202757869830}
   - component: {fileID: 8701841991307419262}
   - component: {fileID: 8711330701624575192}
+  - component: {fileID: 8711330701624575193}
   m_Layer: 0
   m_Name: wp_r90
   m_TagString: Untagged
@@ -20237,6 +21125,30 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8711330701624575193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8696536574275632650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_r90
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!23 &8711345199917437676
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20396,6 +21308,7 @@ GameObject:
   - component: {fileID: 4985681178968057494}
   - component: {fileID: 7121393688045752924}
   - component: {fileID: 3903157955760183462}
+  - component: {fileID: 8778845688466420618}
   m_Layer: 0
   m_Name: wp_microSMG
   m_TagString: Untagged
@@ -20403,6 +21316,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &8778845688466420618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8778845688466420617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_microSMG
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 1
+  _isRifleHi: 0
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!4 &8803367323166280674
 Transform:
   m_ObjectHideFlags: 0
@@ -20421,6 +21358,30 @@ Transform:
   - {fileID: 5384843881916497049}
   m_Father: {fileID: 213186274}
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: -90}
+--- !u!114 &8803367323166280675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169537818824790360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_gluck17
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 1
+  _isRifleHi: 0
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!64 &8806359159436387813
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20508,6 +21469,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5069903248165118885}
   m_Mesh: {fileID: -8310518740751045040, guid: db5ef47b9b5631844bab1e1c50f5a988, type: 3}
+--- !u!114 &8845035709271406267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5069903248165118885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_slon
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!4 &8845690931302635231
 Transform:
   m_ObjectHideFlags: 0
@@ -21146,6 +22131,7 @@ GameObject:
   - component: {fileID: 8960641850675038602}
   - component: {fileID: 8953152924731011170}
   - component: {fileID: 8942850085002993354}
+  - component: {fileID: 8960641850675038603}
   m_Layer: 0
   m_Name: wp_butterflyKnife
   m_TagString: Untagged
@@ -21169,6 +22155,21 @@ Transform:
   - {fileID: 8954823106277388434}
   m_Father: {fileID: 517385732}
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: -90}
+--- !u!114 &8960641850675038603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8957286962469918348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc24362fd098bb34aa9f5bd1fa74d78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
+  _id: 
+  _damageMin: 0
+  _damageMax: 0
 --- !u!4 &8960920606486933738
 Transform:
   m_ObjectHideFlags: 0
@@ -21231,6 +22232,7 @@ GameObject:
   - component: {fileID: 8968909535162002560}
   - component: {fileID: 8940005393120700546}
   - component: {fileID: 8949582207980074540}
+  - component: {fileID: 8968909535162002561}
   m_Layer: 0
   m_Name: wp_j36
   m_TagString: Untagged
@@ -21387,6 +22389,30 @@ Transform:
   - {fileID: 8964726764959993372}
   m_Father: {fileID: 1809578162}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
+--- !u!114 &8968909535162002561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8963224794006028354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0222b68685ef2b4ea61e5fe6f225064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WP_Range
+  _id: wp_j36
+  _damageMin: 0
+  _damageMax: 0
+  _magazineCapacity: 0
+  _reloadTime: 0
+  _isAuto: 0
+  _isShotgun: 0
+  _isPistol: 0
+  _isRifleHi: 1
+  _isRifleLow: 0
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 0
 --- !u!23 &9003355638361481961
 MeshRenderer:
   m_ObjectHideFlags: 0
