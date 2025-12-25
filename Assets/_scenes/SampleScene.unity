@@ -3563,9 +3563,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
+  _isRifle: 0
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -3669,7 +3671,7 @@ Transform:
   m_Children:
   - {fileID: 4015006982525264603}
   m_Father: {fileID: 4629934971584671418}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 80.562675, y: -179.99991, z: -179.99991}
 --- !u!1 &1149578711338505167
 GameObject:
   m_ObjectHideFlags: 0
@@ -3704,9 +3706,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -4522,9 +4526,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
-  _isShotgun: 0
+  _isShotgun: 1
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 0
   _isRifleLow: 1
   _bulletPrefab: {fileID: 0}
@@ -5430,9 +5436,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
+  _isRifle: 0
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -6203,9 +6211,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -6813,9 +6823,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
+  _isRifle: 0
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -7322,9 +7334,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -8687,9 +8701,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 0
   _isRifleLow: 1
   _bulletPrefab: {fileID: 0}
@@ -8728,7 +8744,7 @@ Transform:
   m_Children:
   - {fileID: 3955410058180553950}
   m_Father: {fileID: 4015006982525264603}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -6.1583223, y: 6.503183, z: -3.6323586}
 --- !u!64 &2845362548282009375
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8776,9 +8792,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -9132,9 +9150,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
+  _isRifle: 0
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -9657,9 +9677,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -9968,7 +9990,7 @@ Transform:
   m_Children:
   - {fileID: 8537363799952383031}
   m_Father: {fileID: 3955410058180553950}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 8.060846, y: -7.8793945, z: -1.8530715}
 --- !u!4 &3170827643684741900
 Transform:
   m_ObjectHideFlags: 0
@@ -10710,9 +10732,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -10801,9 +10825,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -10916,9 +10942,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
-  _isShotgun: 0
+  _isShotgun: 1
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 0
   _isRifleLow: 1
   _bulletPrefab: {fileID: 0}
@@ -11467,9 +11495,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -11615,7 +11645,7 @@ Transform:
   - {fileID: 5628238673651674192}
   - {fileID: 3161242493399929176}
   m_Father: {fileID: 2844359524258742857}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -2.0636132, y: -0.0019462117, z: -2.156627}
 --- !u!4 &3970362329937575791
 Transform:
   m_ObjectHideFlags: 0
@@ -11650,7 +11680,7 @@ Transform:
   m_Children:
   - {fileID: 2844359524258742857}
   m_Father: {fileID: 1090168634870251439}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -7.057789, y: -0.00000010429974, z: 0.0000016912716}
 --- !u!1 &4016032938179028126
 GameObject:
   m_ObjectHideFlags: 0
@@ -11662,11 +11692,12 @@ GameObject:
   - component: {fileID: 4391009642941890084}
   - component: {fileID: 7642657865041208414}
   - component: {fileID: 7642657865041208418}
+  - component: {fileID: 7642657865041208420}
+  - component: {fileID: 7642657865041208419}
   - component: {fileID: 7642657865041208417}
   - component: {fileID: 7642657865041208416}
   - component: {fileID: 7642657865041208415}
-  - component: {fileID: 7642657865041208420}
-  - component: {fileID: 7642657865041208419}
+  - component: {fileID: 7642657865041208421}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -11986,9 +12017,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -12506,9 +12539,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -12641,7 +12676,7 @@ Transform:
   m_Children:
   - {fileID: 1090168634870251439}
   m_Father: {fileID: 4391009642941890084}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98021, y: 0, z: 0}
 --- !u!4 &4656826399111566873
 Transform:
   m_ObjectHideFlags: 0
@@ -13122,9 +13157,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 1
+  _isRifle: 0
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -13768,9 +13805,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -14405,9 +14444,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
-  _isShotgun: 0
+  _isShotgun: 1
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 0
   _isRifleLow: 1
   _bulletPrefab: {fileID: 0}
@@ -15121,9 +15162,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -15485,7 +15528,7 @@ Transform:
   - {fileID: 5652204270910168722}
   - {fileID: 196038625}
   m_Father: {fileID: 3955410058180553950}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -4.7520757, y: 84.14578, z: 96.37057}
 --- !u!137 &5639593519440370662
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -16676,9 +16719,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
+  _isRifle: 0
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -16734,7 +16779,7 @@ Transform:
   m_Children:
   - {fileID: 6122793030024318673}
   m_Father: {fileID: 3955410058180553950}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -87.11317, y: -14.877748, z: -128.1034}
 --- !u!137 &6429816817584371635
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -17395,9 +17440,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -17623,9 +17670,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
-  _isShotgun: 0
+  _isShotgun: 1
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 0
   _isRifleLow: 1
   _bulletPrefab: {fileID: 0}
@@ -17734,9 +17783,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
+  _isRifle: 0
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -18046,6 +18097,18 @@ MonoBehaviour:
   - m_Rig: {fileID: 585574162}
     m_Active: 1
   m_Effectors: []
+--- !u!114 &7642657865041208421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4016032938179028126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3310075eb5ab6d40a04a03861508c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerWpController
 --- !u!23 &7665402734337880205
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18792,9 +18855,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
+  _isRifle: 0
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -19668,9 +19733,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 0
   _isRifleLow: 1
   _bulletPrefab: {fileID: 0}
@@ -19903,7 +19970,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.50000006, y: -0.5, z: -0.50000006, w: 0.5}
   m_LocalPosition: {x: 0.0010999999, y: 0.0016000015, z: 0}
-  m_LocalScale: {x: 0.009999999, y: 0.009999998, z: 0.009999998}
+  m_LocalScale: {x: 0.012, y: 0.012, z: 0.012}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8362742525624623144}
@@ -20376,9 +20443,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
+  _isRifle: 0
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -20472,7 +20541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &8470893197133254133
 GameObject:
   m_ObjectHideFlags: 0
@@ -20862,9 +20931,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -21142,9 +21213,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -21333,9 +21406,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 1
+  _isRifle: 0
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -21375,9 +21450,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
+  _aimingSpeed: 0
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
+  _isRifle: 0
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -21486,9 +21563,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
@@ -22406,9 +22485,11 @@ MonoBehaviour:
   _damageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
-  _isAuto: 0
+  _aimingSpeed: 0
+  _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
+  _isRifle: 1
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}

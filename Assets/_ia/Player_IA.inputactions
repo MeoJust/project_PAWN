@@ -125,7 +125,7 @@
                     "name": "",
                     "id": "36ff51db-e046-45aa-af88-7cc1b83159fe",
                     "path": "<Mouse>/rightButton",
-                    "interactions": "Hold",
+                    "interactions": "Hold(duration=0.01,pressPoint=0.01)",
                     "processors": "",
                     "groups": "",
                     "action": "aim",
