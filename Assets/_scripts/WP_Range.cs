@@ -6,6 +6,7 @@ public class WP_Range : Weapon
     [SerializeField] float _magazineCapacity;
     [SerializeField] float _reloadTime;
     [SerializeField] float _aimingSpeed;
+    [SerializeField] float _aimSpeed = .25f;
 
     [Header("Type")]
     [SerializeField] bool _isAuto;
@@ -25,4 +26,5 @@ public class WP_Range : Weapon
     public bool IsRifle => _isRifle;
     public bool IsRifleHi => _isRifleHi;
     public bool IsRifleLow => _isRifleLow;
+    public float AimSpeed => _aimSpeed;
 }

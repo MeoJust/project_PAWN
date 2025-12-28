@@ -5,12 +5,14 @@ public class PlayerWpController : MonoBehaviour
     Player _player;
     Player_IA _controls;
     Animator _animator;
+    WP_Range _wpRange;
 
     bool _hasPistol;
     bool _hasRifle;
     bool _isAiming;
     bool _isAimingHi;
     bool _isAimingLow;
+    bool _wasAiming;
 
     void Awake()
     {
@@ -26,15 +28,14 @@ public class PlayerWpController : MonoBehaviour
         _controls.onFoot.aim.performed += ctx => _isAiming = true;
         _controls.onFoot.aim.canceled += ctx => _isAiming = false;
 
-        WP_Range wp = GetComponentInChildren<WP_Range>();
+        _wpRange = GetComponentInChildren<WP_Range>();
 
-        if (wp != null)
+        if (_wpRange != null)
         {
-
-            _hasPistol = wp.IsPistol;
-            _hasRifle = wp.IsRifle;
-            _isAimingHi = wp.IsRifleHi;
-            _isAimingLow = wp.IsRifleLow;
+            _hasPistol = _wpRange.IsPistol;
+            _hasRifle = _wpRange.IsRifle;
+            _isAimingHi = _wpRange.IsRifleHi;
+            _isAimingLow = _wpRange.IsRifleLow;
 
             _animator.SetBool("hasPistol", _hasPistol);
             _animator.SetBool("hasRifle", _hasRifle);
@@ -44,39 +45,52 @@ public class PlayerWpController : MonoBehaviour
     void Update()
     {
         SetAiming();
+        _wasAiming = _isAiming;
     }
 
-    //TODO:Настроить скорость анимации прицеливания через код, индивидуально для каждого оружия
     void SetAiming()
     {
+        float aimSpeed = _wpRange != null ? _wpRange.AimSpeed : 0.25f;
+
         if (_hasPistol)
         {
-            if (_isAiming)
+            if (_isAiming && !_wasAiming)
             {
+                // Устанавливаем параметр и переходим с индивидуальной скоростью оружия
                 _animator.SetBool("isAimingHi", true);
+                _animator.CrossFade("player_pistolAim", aimSpeed);
             }
-            else
+            else if (!_isAiming && _wasAiming)
             {
+                // Устанавливаем параметр и возвращаемся с индивидуальной скоростью оружия
                 _animator.SetBool("isAimingHi", false);
+                _animator.CrossFade("player_pistolIdle", aimSpeed);
             }
         }
         if (_hasRifle)
         {
-            if (_isAiming)
+            if (_isAiming && !_wasAiming)
             {
+                // Устанавливаем параметры и переходим с индивидуальной скоростью оружия
                 if (_isAimingHi)
                 {
                     _animator.SetBool("isAimingHi", true);
+                    _animator.SetBool("isAimingLow", false);
+                    _animator.CrossFade("player_rifleAimHi", aimSpeed);
                 }
                 else
                 {
+                    _animator.SetBool("isAimingHi", false);
                     _animator.SetBool("isAimingLow", true);
+                    _animator.CrossFade("player_rifleAimLow", aimSpeed);
                 }
             }
-            else
+            else if (!_isAiming && _wasAiming)
             {
+                // Устанавливаем параметры и возвращаемся с индивидуальной скоростью оружия
                 _animator.SetBool("isAimingHi", false);
                 _animator.SetBool("isAimingLow", false);
+                _animator.CrossFade("player_rifleIdle", aimSpeed);
             }
         }
     }
