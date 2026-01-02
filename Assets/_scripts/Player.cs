@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     public Player_IA Controls { get; private set; }
     public PlayerAim Aim { get; private set; }
     public PlayerMove Move { get; private set; }
+    public PlayerWpController WpController { get; private set; }
 
     public Animator Animator { get; private set; }
 
@@ -14,6 +15,7 @@ public class Player : MonoBehaviour
         Controls = new Player_IA();
         Aim = GetComponent<PlayerAim>();
         Move = GetComponent<PlayerMove>();
+        WpController = GetComponent<PlayerWpController>();
         Animator = GetComponent<Animator>();
     }
 

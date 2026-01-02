@@ -24,7 +24,7 @@ public class PlayerAim : MonoBehaviour
     void Update()
     {
 
-        _aimGO.position = new Vector3(GetMousePosition().x, transform.position.y + 1.25f, GetMousePosition().z);
+        _aimGO.position = new Vector3(GetMousePosition().x, transform.position.y + _player.WpController.AimHeight, GetMousePosition().z);
 
     }
 

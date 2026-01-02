@@ -15631,7 +15631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &5051894013316737602
 GameObject:
   m_ObjectHideFlags: 0
@@ -18035,7 +18035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6929179089746304004
 GameObject:
   m_ObjectHideFlags: 0
@@ -18796,6 +18796,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
   _moveSpeed: 5
+  _walkSpeed: 4
+  _runSpeed: 10
   _aimSpeed: 10
 --- !u!114 &7642657865041208416
 MonoBehaviour:
@@ -18907,6 +18909,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3310075eb5ab6d40a04a03861508c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWpController
+  _defaultAimHeight: 1.25
+  _pistolAimHeight: 1.4
+  _rifleAimHiHeight: 1.25
+  _rifleAimLowHeight: 1
   _rightHandMultiAimConstraint: {fileID: 1191163711}
 --- !u!23 &7665402734337880205
 MeshRenderer:

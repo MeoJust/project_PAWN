@@ -8,6 +8,14 @@ public class PlayerWpController : MonoBehaviour
     Animator _animator;
     WP_Range _wpRange;
 
+[Header("Aim Height")]
+    [SerializeField] float _defaultAimHeight = 1.25f;
+    [SerializeField] float _pistolAimHeight = 1.25f;
+    [SerializeField] float _rifleAimHiHeight = 1;
+    [SerializeField] float _rifleAimLowHeight = .5f;
+
+    public float AimHeight{get; private set;}
+
     [Header("Rigging")]
     [SerializeField] MultiAimConstraint _rightHandMultiAimConstraint;
 
@@ -17,11 +25,6 @@ public class PlayerWpController : MonoBehaviour
     bool _isAimingHi;
     bool _isAimingLow;
     bool _wasAiming;
-
-    void Awake()
-    {
-
-    }
 
     void Start()
     {
@@ -46,6 +49,7 @@ public class PlayerWpController : MonoBehaviour
         }
 
         SetRigWeight(0);
+        AimHeight = _defaultAimHeight;
     }
 
     void Update()
@@ -66,6 +70,7 @@ public class PlayerWpController : MonoBehaviour
                 _animator.SetBool("isAimingHi", true);
                 _animator.CrossFade("player_pistolAim", aimSpeed);
                 SetRigWeight(1f);
+                AimHeight = _pistolAimHeight;
             }
             else if (!_isAiming && _wasAiming)
             {
@@ -73,6 +78,7 @@ public class PlayerWpController : MonoBehaviour
                 _animator.SetBool("isAimingHi", false);
                 _animator.CrossFade("player_pistolIdle", aimSpeed);
                 SetRigWeight(0);
+                AimHeight = _defaultAimHeight;
             }
         }
         if (_hasRifle)
@@ -86,6 +92,7 @@ public class PlayerWpController : MonoBehaviour
                     _animator.SetBool("isAimingLow", false);
                     _animator.CrossFade("player_rifleAimHi", aimSpeed);
                     SetRigWeight(1f);
+                    AimHeight = _rifleAimHiHeight;
                 }
                 else
                 {
@@ -93,6 +100,7 @@ public class PlayerWpController : MonoBehaviour
                     _animator.SetBool("isAimingLow", true);
                     _animator.CrossFade("player_rifleAimLow", aimSpeed);
                     SetRigWeight(1f);
+                    AimHeight = _rifleAimLowHeight;
                 }
             }
             else if (!_isAiming && _wasAiming)
@@ -102,6 +110,7 @@ public class PlayerWpController : MonoBehaviour
                 _animator.SetBool("isAimingLow", false);
                 _animator.CrossFade("player_rifleIdle", aimSpeed);
                 SetRigWeight(0f);
+                AimHeight = _defaultAimHeight;
             }
         }
     }
