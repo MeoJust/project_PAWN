@@ -8,7 +8,12 @@ public class PlayerMove : MonoBehaviour
 
     CharacterController _controller;
 
+    public bool IsRunning { get; private set; }
+
+    [Header("Speed")]
     [SerializeField] float _moveSpeed = 5f;
+    [SerializeField] float _walkSpeed = 4f;
+    [SerializeField] float _runSpeed = 10f;
     [SerializeField] float _aimSpeed = 10f;
 
     Vector3 _moveDir;
@@ -24,6 +29,9 @@ public class PlayerMove : MonoBehaviour
 
         _controls.onFoot.move.performed += ctx => _moveInput = ctx.ReadValue<Vector2>();
         _controls.onFoot.move.canceled += ctx => _moveInput = Vector2.zero;
+
+        _controls.onFoot.run.performed += ctx => IsRunning = true;
+        _controls.onFoot.run.canceled += ctx => IsRunning = false;
     }
 
     void Update()
@@ -31,15 +39,23 @@ public class PlayerMove : MonoBehaviour
         Move();
         Rotate();
     }
-
+    
+    //TODO: run until has stamina
+    //TODO: can't aim until running
     void Move()
     {
         _moveDir = new Vector3(_moveInput.x, 0, _moveInput.y);
 
         ApplyGravity();
 
-        if (_moveDir.magnitude > 0)
+        if (_moveDir.magnitude > 0 && !IsRunning)
         {
+            _moveSpeed = _walkSpeed;
+            _controller.Move(_moveDir * _moveSpeed * Time.deltaTime);
+        }
+        else if (_moveDir.magnitude > 0 && IsRunning)
+        {
+            _moveSpeed = _runSpeed;
             _controller.Move(_moveDir * _moveSpeed * Time.deltaTime);
         }
     }

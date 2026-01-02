@@ -127,6 +127,15 @@ public partial class @Player_IA: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""run"",
+                    ""type"": ""Button"",
+                    ""id"": ""41ec4a02-3f13-4fad-ba54-446c1ed98edf"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -217,6 +226,17 @@ public partial class @Player_IA: IInputActionCollection2, IDisposable
                     ""action"": ""aim"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""de5033c7-c57a-4507-900d-4add0a7e364e"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -229,6 +249,7 @@ public partial class @Player_IA: IInputActionCollection2, IDisposable
         m_onFoot_look = m_onFoot.FindAction("look", throwIfNotFound: true);
         m_onFoot_attack = m_onFoot.FindAction("attack", throwIfNotFound: true);
         m_onFoot_aim = m_onFoot.FindAction("aim", throwIfNotFound: true);
+        m_onFoot_run = m_onFoot.FindAction("run", throwIfNotFound: true);
     }
 
     ~@Player_IA()
@@ -313,6 +334,7 @@ public partial class @Player_IA: IInputActionCollection2, IDisposable
     private readonly InputAction m_onFoot_look;
     private readonly InputAction m_onFoot_attack;
     private readonly InputAction m_onFoot_aim;
+    private readonly InputAction m_onFoot_run;
     /// <summary>
     /// Provides access to input actions defined in input action map "onFoot".
     /// </summary>
@@ -340,6 +362,10 @@ public partial class @Player_IA: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "onFoot/aim".
         /// </summary>
         public InputAction @aim => m_Wrapper.m_onFoot_aim;
+        /// <summary>
+        /// Provides access to the underlying input action "onFoot/run".
+        /// </summary>
+        public InputAction @run => m_Wrapper.m_onFoot_run;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -378,6 +404,9 @@ public partial class @Player_IA: IInputActionCollection2, IDisposable
             @aim.started += instance.OnAim;
             @aim.performed += instance.OnAim;
             @aim.canceled += instance.OnAim;
+            @run.started += instance.OnRun;
+            @run.performed += instance.OnRun;
+            @run.canceled += instance.OnRun;
         }
 
         /// <summary>
@@ -401,6 +430,9 @@ public partial class @Player_IA: IInputActionCollection2, IDisposable
             @aim.started -= instance.OnAim;
             @aim.performed -= instance.OnAim;
             @aim.canceled -= instance.OnAim;
+            @run.started -= instance.OnRun;
+            @run.performed -= instance.OnRun;
+            @run.canceled -= instance.OnRun;
         }
 
         /// <summary>
@@ -469,5 +501,12 @@ public partial class @Player_IA: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnAim(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "run" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRun(InputAction.CallbackContext context);
     }
 }

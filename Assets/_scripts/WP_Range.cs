@@ -22,6 +22,23 @@ public class WP_Range : Weapon
     [SerializeField] GameObject _bulletPrefab;
     [SerializeField] float _bulletForce;
 
+    [Space(10)]
+    [SerializeField] GameObject _playerLeftHand;
+
+    void OnEnable()
+    {
+        _playerLeftHand.SetActive(false);
+    }
+    void OnDisable()
+    {
+        _playerLeftHand.SetActive(true);
+    }
+
+    void Start()
+    {
+        // _playerLeftHand.SetActive(false);
+    }
+
     public bool IsPistol => _isPistol;
     public bool IsRifle => _isRifle;
     public bool IsRifleHi => _isRifleHi;
