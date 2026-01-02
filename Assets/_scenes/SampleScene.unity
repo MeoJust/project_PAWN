@@ -18815,6 +18815,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 896
   _aimGO: {fileID: 310107185}
+  _aimPositionOffset: 1.5
 --- !u!114 &7642657865041208417
 MonoBehaviour:
   m_ObjectHideFlags: 0
