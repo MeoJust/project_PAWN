@@ -7,14 +7,15 @@ public class PlayerWpController : MonoBehaviour
     Player_IA _controls;
     Animator _animator;
     WP_Range _wpRange;
+    WP_Melee _wpMelee;
 
-[Header("Aim Height")]
+    [Header("Aim Height")]
     [SerializeField] float _defaultAimHeight = 1.25f;
     [SerializeField] float _pistolAimHeight = 1.25f;
     [SerializeField] float _rifleAimHiHeight = 1;
     [SerializeField] float _rifleAimLowHeight = .5f;
 
-    public float AimHeight{get; private set;}
+    public float AimHeight { get; private set; }
 
     [Header("Rigging")]
     [SerializeField] MultiAimConstraint _rightHandMultiAimConstraint;
@@ -35,7 +36,11 @@ public class PlayerWpController : MonoBehaviour
         _controls.onFoot.aim.performed += ctx => _isAiming = true;
         _controls.onFoot.aim.canceled += ctx => _isAiming = false;
 
+        _controls.onFoot.attack.performed += ctx => Attack();
+        _controls.onFoot.attack.canceled += ctx => StopAttack();
+
         _wpRange = GetComponentInChildren<WP_Range>();
+        _wpMelee = GetComponentInChildren<WP_Melee>();
 
         if (_wpRange != null)
         {
@@ -112,6 +117,36 @@ public class PlayerWpController : MonoBehaviour
                 SetRigWeight(0f);
                 AimHeight = _defaultAimHeight;
             }
+        }
+    }
+
+    void Attack()
+    {
+        if (_isAiming && _wpRange != null)
+        {
+            // Для автоматического оружия начинаем непрерывную стрельбу
+            if (_wpRange.IsAuto)
+            {
+                _wpRange.StartShooting();
+            }
+            else
+            {
+                // Для пистолета и дробовика - одиночный выстрел
+                _wpRange.Shoot();
+            }
+            print("Attack with range weapon");
+        }
+        else
+        {
+            print("Attack with melee weapon");
+        }
+    }
+
+    void StopAttack()
+    {
+        if (_isAiming && _wpRange != null && _wpRange.IsAuto)
+        {
+            _wpRange.StopShooting();
         }
     }
 

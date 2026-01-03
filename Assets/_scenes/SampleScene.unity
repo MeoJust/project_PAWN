@@ -209,6 +209,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96968795}
   m_Mesh: {fileID: 6949670033209662900, guid: e517488d718340342b1cfdb6e3a40897, type: 3}
+--- !u!1 &144508599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144508600}
+  m_Layer: 0
+  m_Name: piuPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &144508600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144508599}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.36500236, y: 0.073004216, z: -0.0000012478434}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3545005871723067270}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &173711041
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +365,37 @@ Transform:
   - {fileID: 517385732}
   m_Father: {fileID: 5628238673651674192}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &206564685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 206564686}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &206564686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206564685}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 1.2540044, y: 0.04002982, z: 0.000000050946507}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1156697946631003503}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &213186273
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,7 +742,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -6160,12 +6222,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_357
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
@@ -6173,7 +6236,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!33 &1003546894156372908
 MeshFilter:
@@ -6305,12 +6372,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_np5
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
@@ -6318,7 +6386,11 @@ MonoBehaviour:
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!4 &1156697946631003503
 Transform:
@@ -6334,6 +6406,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9176921646221672763}
+  - {fileID: 206564686}
   m_Father: {fileID: 1809578162}
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: -90}
 --- !u!1 &1306358935403505534
@@ -6440,8 +6513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
   _id: 
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
 --- !u!33 &1365321964371149802
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7129,12 +7202,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_spec8
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 0
   _isShotgun: 1
   _isPistol: 0
@@ -7142,7 +7216,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 1
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!23 &1686383797276757987
 MeshRenderer:
@@ -8034,12 +8112,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_38
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
@@ -8047,7 +8126,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!23 &1830411678343268833
 MeshRenderer:
@@ -8928,12 +9011,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_jb07
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
@@ -8941,7 +9025,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!33 &2555169603788575236
 MeshFilter:
@@ -9442,12 +9530,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_m1
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
@@ -9455,7 +9544,11 @@ MonoBehaviour:
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!1 &2663731363176532299
 GameObject:
@@ -10812,12 +10905,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_grenadeLouncher
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 0
@@ -10825,7 +10919,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 1
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!1 &2753191313301321187
 GameObject:
@@ -10905,12 +11003,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_n16
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
@@ -10918,7 +11017,11 @@ MonoBehaviour:
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!33 &2869555526330905693
 MeshFilter:
@@ -11244,12 +11347,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_blaster
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
@@ -11257,7 +11361,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!1 &3015060668993920181
 GameObject:
@@ -11774,12 +11882,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_scr
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
@@ -11787,7 +11896,11 @@ MonoBehaviour:
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!23 &3054759996797902040
 MeshRenderer:
@@ -12812,12 +12925,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_hummerCannon
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
@@ -12825,7 +12939,11 @@ MonoBehaviour:
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!1 &3448504089053304068
 GameObject:
@@ -12859,6 +12977,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 256423810}
+  - {fileID: 144508600}
   m_Father: {fileID: 213186274}
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: -90}
 --- !u!23 &3574281515223135715
@@ -12950,12 +13069,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_shotgun
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 0
   _isShotgun: 1
   _isPistol: 0
@@ -12963,7 +13083,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 1
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!4 &3750029456662716529
 Transform:
@@ -13506,12 +13630,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_smg45
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
@@ -13519,7 +13644,11 @@ MonoBehaviour:
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!1 &3877885961461935767
 GameObject:
@@ -14031,12 +14160,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_energyRifle
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
@@ -14044,7 +14174,11 @@ MonoBehaviour:
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!1 &4147074427101372272
 GameObject:
@@ -14093,8 +14227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
   _id: 
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
 --- !u!1 &4180532410173017220
 GameObject:
   m_ObjectHideFlags: 0
@@ -14556,12 +14690,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_akn74s
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
@@ -14569,7 +14704,11 @@ MonoBehaviour:
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!33 &4213434227979857024
 MeshFilter:
@@ -14590,7 +14729,6 @@ GameObject:
   - component: {fileID: 3545005871723067270}
   - component: {fileID: 476747810573989923}
   - component: {fileID: 2412039144137411817}
-  - component: {fileID: 7198434681703102595}
   - component: {fileID: 7198434681703102596}
   m_Layer: 0
   m_Name: wp_cult
@@ -14598,7 +14736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &4313172396890159138
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15177,12 +15315,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_np7
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 1
@@ -15190,7 +15329,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!23 &4682840124388663729
 MeshRenderer:
@@ -15503,8 +15646,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
   _id: 
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
 --- !u!33 &4985681178968057494
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15631,7 +15774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &5051894013316737602
 GameObject:
   m_ObjectHideFlags: 0
@@ -15875,12 +16018,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_shotgunM
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 0
   _isShotgun: 1
   _isPistol: 0
@@ -15888,7 +16032,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 1
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!33 &5073991059822935892
 MeshFilter:
@@ -16025,8 +16173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
   _id: 
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
 --- !u!23 &5145772076168375030
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16318,8 +16466,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
   _id: 
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
 --- !u!33 &5585603067565605959
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16551,8 +16699,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
   _id: 
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
 --- !u!1 &5780187034007292338
 GameObject:
   m_ObjectHideFlags: 0
@@ -17065,8 +17213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
   _id: 
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
 --- !u!4 &6269052563417732405
 Transform:
   m_ObjectHideFlags: 0
@@ -17187,8 +17335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
   _id: 
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
 --- !u!23 &6307583099095741970
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17553,12 +17701,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_cultGold
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
@@ -17566,7 +17715,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!1 &6331517597185302978
 GameObject:
@@ -18228,12 +18381,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_famous
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
@@ -18241,7 +18395,11 @@ MonoBehaviour:
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!23 &6951798767685717756
 MeshRenderer:
@@ -18460,12 +18618,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_magazineShotgun
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 0
   _isShotgun: 1
   _isPistol: 0
@@ -18473,7 +18632,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 1
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!33 &6967514761289154154
 MeshFilter:
@@ -18540,28 +18703,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7198434681703102595
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4213597535401045308}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3727299226792910341, guid: e6efe674338ad4a49866fd7e5c2ba6b4, type: 3}
 --- !u!114 &7198434681703102596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18575,20 +18716,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_cult
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
-  _isAuto: 0
-  _isShotgun: 0
+  _fireRate: 0.25
+  _isAuto: 1
+  _isShotgun: 1
   _isPistol: 1
   _isRifle: 0
   _isRifleHi: 0
   _isRifleLow: 0
-  _bulletPrefab: {fileID: 0}
-  _bulletForce: 0
+  _bulletPrefab: {fileID: 1066631095245102324, guid: 2a1a9d3ded2ec1c4c88a713b003be9df, type: 3}
+  _bulletSpawnPoint: {fileID: 144508600}
+  _bulletForce: 10
+  _bulletSpreadMin: 5
+  _bulletSpreadMax: 20
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!64 &7221508805737735891
 MeshCollider:
@@ -19658,12 +19804,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_deagle
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
@@ -19671,7 +19818,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!4 &7999534546181018391
 Transform:
@@ -20588,12 +20739,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_m100
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
@@ -20601,7 +20753,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 1
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!33 &8028897273625853615
 MeshFilter:
@@ -20682,8 +20838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
   _id: 
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
 --- !u!1 &8226933512358464463
 GameObject:
   m_ObjectHideFlags: 0
@@ -20788,8 +20944,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
   _id: 
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
 --- !u!4 &8259435727749835059
 Transform:
   m_ObjectHideFlags: 0
@@ -21320,12 +21476,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_44
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
@@ -21333,7 +21490,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!33 &8389078871068988638
 MeshFilter:
@@ -21811,12 +21972,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_n70
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
@@ -21824,7 +21986,11 @@ MonoBehaviour:
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!33 &8498836552568647995
 MeshFilter:
@@ -22096,12 +22262,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_r90
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 0
@@ -22109,7 +22276,11 @@ MonoBehaviour:
   _isRifleHi: 1
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!23 &8711345199917437676
 MeshRenderer:
@@ -22291,12 +22462,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_microSMG
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 1
   _isShotgun: 0
   _isPistol: 1
@@ -22304,7 +22476,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!4 &8803367323166280674
 Transform:
@@ -22338,12 +22514,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Range
   _id: wp_gluck17
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
   _magazineCapacity: 0
   _reloadTime: 0
   _aimingSpeed: 0
   _aimSpeed: 0.25
+  _fireRate: 0.25
   _isAuto: 0
   _isShotgun: 0
   _isPistol: 1
@@ -22351,7 +22528,11 @@ MonoBehaviour:
   _isRifleHi: 0
   _isRifleLow: 0
   _bulletPrefab: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _bulletForce: 0
+  _bulletSpreadMin: 0.1
+  _bulletSpreadMax: 0.2
+  _shotgunPelletCount: 5
   _playerLeftHand: {fileID: 3798436656675770051}
 --- !u!64 &8806359159436387813
 MeshCollider:
@@ -22765,8 +22946,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WP_Melee
   _id: 
-  _damageMin: 0
-  _damageMax: 0
+  DamageMin: 0
+  DamageMax: 0
 --- !u!4 &8960920606486933738
 Transform:
   m_ObjectHideFlags: 0

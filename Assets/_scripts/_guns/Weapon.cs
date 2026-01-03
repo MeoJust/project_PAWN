@@ -6,6 +6,6 @@ public class Weapon : MonoBehaviour
     [SerializeField] string _id;
 
     [Header("Damage")]
-    [SerializeField] float _damageMin;
-    [SerializeField] float _damageMax;
+    public float DamageMin;
+    public float DamageMax;
 }
