@@ -53,7 +53,7 @@ public class WP_Range : Weapon
 
     public void Shoot()
     {
-        if (_isPistol && !_isAuto)
+        if ((_isPistol && !_isAuto) || (_isRifle && !_isAuto))
         {
             // Pistol - одиночный выстрел
             SpawnBullet();
