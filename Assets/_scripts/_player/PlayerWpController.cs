@@ -27,6 +27,8 @@ public class PlayerWpController : MonoBehaviour
     bool _isAimingLow;
     bool _wasAiming;
 
+    public bool IsAiming => _isAiming;
+
     void Start()
     {
         _player = GetComponent<Player>();
@@ -65,12 +67,22 @@ public class PlayerWpController : MonoBehaviour
 
     void SetAiming()
     {
+        // if (_player.Move.IsRunning)
+        // {
+        //     return;
+        // }
         float aimSpeed = _wpRange != null ? _wpRange.AimSpeed : 0.25f;
 
         if (_hasPistol)
         {
             if (_isAiming && !_wasAiming)
             {
+                // Останавливаем бег при начале прицеливания
+                if (_player.Move.IsRunning)
+                {
+                    _player.Move.StopRunning();
+                }
+                
                 // Устанавливаем параметр и переходим с индивидуальной скоростью оружия
                 _animator.SetBool("isAimingHi", true);
                 _animator.CrossFade("player_pistolAim", aimSpeed);
@@ -84,12 +96,24 @@ public class PlayerWpController : MonoBehaviour
                 _animator.CrossFade("player_pistolIdle", aimSpeed);
                 SetRigWeight(0);
                 AimHeight = _defaultAimHeight;
+
+                // Останавливаем автоматическую стрельбу при отмене прицеливания
+                if (_wpRange != null && _wpRange.IsAuto)
+                {
+                    _wpRange.StopShooting();
+                }
             }
         }
         if (_hasRifle)
         {
             if (_isAiming && !_wasAiming)
             {
+                // Останавливаем бег при начале прицеливания
+                if (_player.Move.IsRunning)
+                {
+                    _player.Move.StopRunning();
+                }
+                
                 // Устанавливаем параметры и переходим с индивидуальной скоростью оружия
                 if (_isAimingHi)
                 {
@@ -116,6 +140,12 @@ public class PlayerWpController : MonoBehaviour
                 _animator.CrossFade("player_rifleIdle", aimSpeed);
                 SetRigWeight(0f);
                 AimHeight = _defaultAimHeight;
+
+                // Останавливаем автоматическую стрельбу при отмене прицеливания
+                if (_wpRange != null && _wpRange.IsAuto)
+                {
+                    _wpRange.StopShooting();
+                }
             }
         }
     }

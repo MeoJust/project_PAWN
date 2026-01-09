@@ -231,7 +231,7 @@ public partial class @Player_IA: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""de5033c7-c57a-4507-900d-4add0a7e364e"",
                     ""path"": ""<Keyboard>/shift"",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": ""Hold(duration=0.01,pressPoint=0.01)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""run"",

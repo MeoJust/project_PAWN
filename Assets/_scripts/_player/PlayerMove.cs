@@ -30,8 +30,23 @@ public class PlayerMove : MonoBehaviour
         _controls.onFoot.move.performed += ctx => _moveInput = ctx.ReadValue<Vector2>();
         _controls.onFoot.move.canceled += ctx => _moveInput = Vector2.zero;
 
-        _controls.onFoot.run.performed += ctx => IsRunning = true;
-        _controls.onFoot.run.canceled += ctx => IsRunning = false;
+        _controls.onFoot.run.performed += ctx => StartRunning();
+        _controls.onFoot.run.canceled += ctx => StopRunning();
+    }
+    
+    void StartRunning()
+    {
+        // Нельзя начать бег во время прицеливания
+        if (_player.WpController != null && _player.WpController.IsAiming)
+        {
+            return;
+        }
+        IsRunning = true;
+    }
+    
+    public void StopRunning()
+    {
+        IsRunning = false;
     }
 
     void Update()
@@ -41,12 +56,17 @@ public class PlayerMove : MonoBehaviour
     }
     
     //TODO: run until has stamina
-    //TODO: can't aim until running
     void Move()
     {
         _moveDir = new Vector3(_moveInput.x, 0, _moveInput.y);
 
         ApplyGravity();
+
+        // Если прицеливаемся, останавливаем бег
+        if (_player.WpController != null && _player.WpController.IsAiming && IsRunning)
+        {
+            StopRunning();
+        }
 
         if (_moveDir.magnitude > 0 && !IsRunning)
         {
