@@ -34,6 +34,7 @@ public class WP_Range : Weapon
     [SerializeField] GameObject _playerLeftHand;
 
     bool _isShooting;
+    float _timeSinceLastShot;
     Coroutine _autoFireCoroutine;
 
     void OnEnable()
@@ -51,18 +52,27 @@ public class WP_Range : Weapon
         // _playerLeftHand.SetActive(false);
     }
 
+    void Update()
+    {
+        _timeSinceLastShot += Time.deltaTime;
+    }
+
     public void Shoot()
     {
+        if (_timeSinceLastShot < _fireRate) return;
+
         if ((_isPistol && !_isAuto) || (_isRifle && !_isAuto))
         {
             // Pistol - одиночный выстрел
             SpawnBullet();
+            _timeSinceLastShot = 0;
         }
 
         if (_isAuto)
         {
             // Auto - одиночный выстрел (автоматическая стрельба управляется через StartShooting/StopShooting)
             SpawnBullet();
+            _timeSinceLastShot = 0;
         }
 
         if (_isShotgun)
@@ -71,6 +81,7 @@ public class WP_Range : Weapon
             for (int i = 0; i < _shotgunPelletCount; i++)
             {
                 SpawnBullet();
+                _timeSinceLastShot = 0;
             }
         }
     }
@@ -78,19 +89,19 @@ public class WP_Range : Weapon
     void SpawnBullet()
     {
         GameObject bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, _bulletSpawnPoint.rotation);
-        
+
         // Рассчитываем отдельный разброс для каждой пули в горизонтальной плоскости
         // Для top-down шутера разброс применяется только по горизонтальным осям (X и Z)
         // Вертикальная ось Y остается без изменений
         float spreadX = Random.Range(-_bulletSpreadMax, _bulletSpreadMax);
         float spreadZ = Random.Range(-_bulletSpreadMax, _bulletSpreadMax);
-        
+
         // Применяем разброс через углы отклонения в горизонтальной плоскости
         // spreadX - отклонение по оси X (в градусах)
         // spreadZ - отклонение по оси Z (в градусах)
         // Y остается 0, чтобы не было вертикального разброса
         Vector3 spreadDirection = Quaternion.Euler(0, spreadX, spreadZ) * _bulletSpawnPoint.forward;
-        
+
         bullet.GetComponent<Rigidbody>().AddForce(spreadDirection * _bulletForce, ForceMode.Impulse);
         bullet.GetComponent<Bullet>().Damage = Random.Range(DamageMin, DamageMax);
     }

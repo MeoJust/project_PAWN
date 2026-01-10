@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float _walkSpeed = 4f;
     [SerializeField] float _runSpeed = 10f;
     [SerializeField] float _aimSpeed = 10f;
+    [SerializeField] float _runRotationSpeed = 15f;
+
+    [Header("Rigging")]
+    [SerializeField] MultiAimConstraint _headMultiAimConstraint;
 
     Vector3 _moveDir;
     Vector2 _moveInput;
@@ -33,7 +38,14 @@ public class PlayerMove : MonoBehaviour
         _controls.onFoot.run.performed += ctx => StartRunning();
         _controls.onFoot.run.canceled += ctx => StopRunning();
     }
-    
+
+        void Update()
+    {
+        Move();
+        Rotate();
+        SetRigWeight(IsRunning ? 0 : 1f);
+    }
+
     void StartRunning()
     {
         // Нельзя начать бег во время прицеливания
@@ -43,18 +55,12 @@ public class PlayerMove : MonoBehaviour
         }
         IsRunning = true;
     }
-    
+
     public void StopRunning()
     {
         IsRunning = false;
     }
 
-    void Update()
-    {
-        Move();
-        Rotate();
-    }
-    
     //TODO: run until has stamina
     void Move()
     {
@@ -80,13 +86,35 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    // void Rotate()
+    // {
+    //     Vector3 lookDir = _player.Aim.GetMousePosition() - transform.position;
+    //     lookDir.y = 0;
+    //     lookDir = lookDir.normalized;
+
+    //     transform.forward = Vector3.Lerp(transform.forward, lookDir, _aimSpeed * Time.deltaTime);
+    // }
+
     void Rotate()
     {
-        Vector3 lookDir = _player.Aim.GetMousePosition() - transform.position;
-        lookDir.y = 0;
-        lookDir = lookDir.normalized;
+        if (IsRunning)
+        {
+            // При беге поворачиваемся в направлении движения
+            if (_moveDir.magnitude > 0.1f)
+            {
+                Vector3 moveDirection = new Vector3(_moveDir.x, 0, _moveDir.z).normalized;
+                transform.forward = Vector3.Lerp(transform.forward, moveDirection, _runRotationSpeed * Time.deltaTime);
+            }
+        }
+        else
+        {
+            // При ходьбе поворачиваемся в направлении прицеливания
+            Vector3 lookDir = _player.Aim.GetMousePosition() - transform.position;
+            lookDir.y = 0;
+            lookDir = lookDir.normalized;
 
-        transform.forward = Vector3.Lerp(transform.forward, lookDir, _aimSpeed * Time.deltaTime);
+            transform.forward = Vector3.Lerp(transform.forward, lookDir, _aimSpeed * Time.deltaTime);
+        }
     }
 
     void ApplyGravity()
@@ -101,5 +129,13 @@ public class PlayerMove : MonoBehaviour
         }
 
         _moveDir.y = _verticalVelocity;
+    }
+
+        void SetRigWeight(float weight)
+    {
+        if (_headMultiAimConstraint != null)
+        {
+            _headMultiAimConstraint.weight = weight;
+        }
     }
 }
