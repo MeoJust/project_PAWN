@@ -16,8 +16,8 @@ TagManager:
   - back
   - back_dynamic
   - bullet
-  - 
-  - 
+  - noNavMesh
+  - player
   - 
   - 
   - 
